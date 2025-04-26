@@ -14,6 +14,11 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 app.mount("/images", StaticFiles(directory=UPLOAD_DIR), name="images")
 
+@app.get("/")
+async def root():
+    return {"message": "Image Hosting API is live! Use /upload to upload images."}
+
+
 @app.post("/upload")
 async def upload_image(file: UploadFile = File(...)):
     try:

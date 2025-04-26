@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Package manager files
+Pipfile
+Pipfile.lock
+
+# Render build files (optional if you generate later)
+build/
+dist/
+
+# Logs and database
+*.log
+*.sqlite3
+*.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test directory (your local testing scripts/tools)
+test/
+
+# Uploads directory content (but not the folder itself)
+uploads/*
+!uploads/.gitkeep
+
+# Runtime files
+*.pid
+*.seed
+
+# Environment variables / Secrets (for future)
+.env.local
+.env.production
+.env.development
+
+# Coverage and test reports
+htmlcov/
+coverage.xml
+*.cover
+.pytest_cache/
+.cache/
+
+# Misc
+*.bak
+*.swp
+*.tmp
