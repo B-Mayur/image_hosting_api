@@ -31,7 +31,7 @@ async def upload_image(file: UploadFile = File(...)):
             f.write(contents)
 
         public_url = f"/images/{filename}"
-        full_url = f"http://yourusername.pythonanywhere.com{public_url}"
+        full_url = f"{config['base_url']}{public_url}"
         logger.info(f"Image uploaded successfully: {filename}")
         return {"url": full_url}
 
