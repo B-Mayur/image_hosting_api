@@ -37,6 +37,7 @@ async def upload_image(file: UploadFile = File(...)):
         logger.exception("Unexpected error during upload")
         raise HTTPException(status_code=500, detail="Internal server error")
     
-@app.get("/")
+@app.get("/", include_in_schema=False)
+@app.head("/", include_in_schema=False)
 async def root():
     return JSONResponse(content={"message": "Image Hosting API is live!"})
